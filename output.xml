@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.2 on win32)" generated="20230905 11:49:48.732" rpa="false" schemaversion="4">
+<suite id="s1" name="MyProject Root Folder" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder">
+<suite id="s1-s1" name="Framework" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework">
+<suite id="s1-s1-s1" name="TestCycles" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles">
+<suite id="s1-s1-s1-s1" name="Module 2" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles\Module 2">
+<suite id="s1-s1-s1-s1-s1" name="TestCase For Login" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles\Module 2\TestCase_For_Login.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Login into URL1" line="8">
+<kw name="Open URL1" library="loginPO">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN_URL1}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230905 11:49:48.994" level="INFO">Opening browser 'chrome' to base url 'https://demo.guru99.com/test/newtours/login.php'.</msg>
+<status status="PASS" starttime="20230905 11:49:48.994" endtime="20230905 11:49:54.070"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230905 11:49:54.071" endtime="20230905 11:49:54.217"/>
+</kw>
+<status status="PASS" starttime="20230905 11:49:48.994" endtime="20230905 11:49:54.217"/>
+</kw>
+<kw name="Login For URL" library="common_keywords">
+<arg>ChanikyaVarma</arg>
+<arg>Kingkong@7</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${url_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230905 11:49:54.218" level="INFO">Typing text 'ChanikyaVarma' into text field 'xpath://input[contains(@name,'user')]'.</msg>
+<status status="PASS" starttime="20230905 11:49:54.218" endtime="20230905 11:49:54.370"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${url_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230905 11:49:54.370" level="INFO">Typing text 'Kingkong@7' into text field 'xpath://input[contains(@name,'password')]'.</msg>
+<status status="PASS" starttime="20230905 11:49:54.370" endtime="20230905 11:49:54.482"/>
+</kw>
+<status status="PASS" starttime="20230905 11:49:54.217" endtime="20230905 11:49:54.482"/>
+</kw>
+<kw name="Click Login 1" library="login_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${url1_submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230905 11:49:54.484" level="INFO">Clicking element 'xpath://input[@name='submit']'.</msg>
+<status status="PASS" starttime="20230905 11:49:54.483" endtime="20230905 11:49:55.717"/>
+</kw>
+<status status="PASS" starttime="20230905 11:49:54.483" endtime="20230905 11:49:55.718"/>
+</kw>
+<kw name="Close The URL" library="common_keywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230905 11:49:55.721" endtime="20230905 11:49:58.033"/>
+</kw>
+<status status="PASS" starttime="20230905 11:49:55.719" endtime="20230905 11:49:58.033"/>
+</kw>
+<status status="PASS" starttime="20230905 11:49:48.994" endtime="20230905 11:49:58.033"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t2" name="Login into URL2" line="14">
+<kw name="Open URL2" library="loginPO">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN_URL2}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230905 11:49:58.033" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/parabank/index.htm'.</msg>
+<status status="PASS" starttime="20230905 11:49:58.033" endtime="20230905 11:50:04.279"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230905 11:50:04.279" endtime="20230905 11:50:04.405"/>
+</kw>
+<status status="PASS" starttime="20230905 11:49:58.033" endtime="20230905 11:50:04.405"/>
+</kw>
+<kw name="Login For URL" library="common_keywords">
+<arg>ChanikyaVarma</arg>
+<arg>Kingkong@7</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${url_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230905 11:50:04.405" level="INFO">Typing text 'ChanikyaVarma' into text field 'xpath://input[contains(@name,'user')]'.</msg>
+<status status="PASS" starttime="20230905 11:50:04.405" endtime="20230905 11:50:04.558"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${url_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230905 11:50:04.558" level="INFO">Typing text 'Kingkong@7' into text field 'xpath://input[contains(@name,'password')]'.</msg>
+<status status="PASS" starttime="20230905 11:50:04.558" endtime="20230905 11:50:04.644"/>
+</kw>
+<status status="PASS" starttime="20230905 11:50:04.405" endtime="20230905 11:50:04.644"/>
+</kw>
+<kw name="Click Login 2" library="login_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${url2_submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230905 11:50:04.644" level="INFO">Clicking element 'xpath://input[@value='Log In']'.</msg>
+<status status="PASS" starttime="20230905 11:50:04.644" endtime="20230905 11:50:05.451"/>
+</kw>
+<status status="PASS" starttime="20230905 11:50:04.644" endtime="20230905 11:50:05.451"/>
+</kw>
+<kw name="Close The URL" library="common_keywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230905 11:50:05.452" endtime="20230905 11:50:07.725"/>
+</kw>
+<status status="PASS" starttime="20230905 11:50:05.452" endtime="20230905 11:50:07.725"/>
+</kw>
+<status status="PASS" starttime="20230905 11:49:58.033" endtime="20230905 11:50:07.725"/>
+</test>
+<status status="PASS" starttime="20230905 11:49:48.764" endtime="20230905 11:50:07.725"/>
+</suite>
+<status status="PASS" starttime="20230905 11:49:48.748" endtime="20230905 11:50:07.740"/>
+</suite>
+<status status="PASS" starttime="20230905 11:49:48.748" endtime="20230905 11:50:07.740"/>
+</suite>
+<status status="PASS" starttime="20230905 11:49:48.748" endtime="20230905 11:50:07.756"/>
+</suite>
+<status status="PASS" starttime="20230905 11:49:48.732" endtime="20230905 11:50:07.756"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="MyProject Root Folder">MyProject Root Folder</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Framework">MyProject Root Folder.Framework</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="TestCycles">MyProject Root Folder.Framework.TestCycles</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1" name="Module 2">MyProject Root Folder.Framework.TestCycles.Module 2</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="TestCase For Login">MyProject Root Folder.Framework.TestCycles.Module 2.TestCase For Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
