@@ -1,4 +1,6 @@
 *** Settings ***
+Library    SeleniumLibrary
+Library    Collections
 Resource    Framework/Resources/Variables/HROS_variables.robot
 
 *** Keywords ***
@@ -89,7 +91,6 @@ Check Top Options
     Log To Console    ${\n}${name}
     Log To Console    ${\n}Profile Option is working
     Log To Console    ${\n}All the Top Menu Options are working correctly
-
 
 Check Left Options
     # Home Button
