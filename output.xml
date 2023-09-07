@@ -1,136 +1,292 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.2 on win32)" generated="20230905 11:49:48.732" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.2 on win32)" generated="20230907 12:04:42.301" rpa="false" schemaversion="4">
 <suite id="s1" name="MyProject Root Folder" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder">
 <suite id="s1-s1" name="Framework" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework">
 <suite id="s1-s1-s1" name="TestCycles" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles">
-<suite id="s1-s1-s1-s1" name="Module 2" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles\Module 2">
-<suite id="s1-s1-s1-s1-s1" name="TestCase For Login" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles\Module 2\TestCase_For_Login.robot">
-<test id="s1-s1-s1-s1-s1-t1" name="Login into URL1" line="8">
-<kw name="Open URL1" library="loginPO">
+<suite id="s1-s1-s1-s1" name="Module 3" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles\Module 3">
+<suite id="s1-s1-s1-s1-s1" name="TestCase For HR-OS" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles\Module 3\TestCase_For_HR-OS.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Login To HROS" line="8">
+<kw name="Open HROS" library="HROS_PO">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${LOGIN_URL1}</arg>
+<arg>${HROS_URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230905 11:49:48.994" level="INFO">Opening browser 'chrome' to base url 'https://demo.guru99.com/test/newtours/login.php'.</msg>
-<status status="PASS" starttime="20230905 11:49:48.994" endtime="20230905 11:49:54.070"/>
+<msg timestamp="20230907 12:04:42.583" level="INFO">Opening browser 'chrome' to base url 'https://terralogic.paxanimi.ai/home'.</msg>
+<status status="PASS" starttime="20230907 12:04:42.583" endtime="20230907 12:04:51.904"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230905 11:49:54.071" endtime="20230905 11:49:54.217"/>
+<status status="PASS" starttime="20230907 12:04:51.904" endtime="20230907 12:04:52.031"/>
 </kw>
-<status status="PASS" starttime="20230905 11:49:48.994" endtime="20230905 11:49:54.217"/>
+<status status="PASS" starttime="20230907 12:04:42.583" endtime="20230907 12:04:52.031"/>
 </kw>
-<kw name="Login For URL" library="common_keywords">
-<arg>ChanikyaVarma</arg>
-<arg>Kingkong@7</arg>
+<kw name="Login HROS" library="HROS_keywords">
+<arg>chanikya.varma@terralogic.com</arg>
+<arg>Hiddenleaf@7</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Google_Login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230907 12:04:52.031" endtime="20230907 12:04:53.094"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Google_Login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230907 12:04:53.095" level="INFO">Clicking element 'xpath://form[@id='basic']/button[2]'.</msg>
+<status status="PASS" starttime="20230907 12:04:53.094" endtime="20230907 12:04:53.155"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230907 12:04:56.156" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230907 12:04:53.155" endtime="20230907 12:04:56.156"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230907 12:04:56.174" level="INFO">${handles} = ['D2351DFEAFDF5556723B0E2769A51461', '1E7986889FB6F22F255DD8C1EDC2F390']</msg>
+<status status="PASS" starttime="20230907 12:04:56.156" endtime="20230907 12:04:56.174"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230907 12:04:56.175" endtime="20230907 12:04:56.221"/>
+</kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${url_username}</arg>
+<arg>${Email}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230905 11:49:54.218" level="INFO">Typing text 'ChanikyaVarma' into text field 'xpath://input[contains(@name,'user')]'.</msg>
-<status status="PASS" starttime="20230905 11:49:54.218" endtime="20230905 11:49:54.370"/>
+<msg timestamp="20230907 12:04:56.223" level="INFO">Typing text 'chanikya.varma@terralogic.com' into text field 'id:identifierId'.</msg>
+<status status="PASS" starttime="20230907 12:04:56.221" endtime="20230907 12:04:56.640"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Next}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230907 12:04:56.640" level="INFO">Clicking element 'xpath://button/span[.='Next']'.</msg>
+<status status="PASS" starttime="20230907 12:04:56.640" endtime="20230907 12:04:56.794"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230907 12:04:59.795" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230907 12:04:56.794" endtime="20230907 12:04:59.795"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${url_password}</arg>
+<arg>${pass}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230905 11:49:54.370" level="INFO">Typing text 'Kingkong@7' into text field 'xpath://input[contains(@name,'password')]'.</msg>
-<status status="PASS" starttime="20230905 11:49:54.370" endtime="20230905 11:49:54.482"/>
+<msg timestamp="20230907 12:04:59.795" level="INFO">Typing text 'Hiddenleaf@7' into text field 'name:Passwd'.</msg>
+<status status="PASS" starttime="20230907 12:04:59.795" endtime="20230907 12:04:59.903"/>
 </kw>
-<status status="PASS" starttime="20230905 11:49:54.217" endtime="20230905 11:49:54.482"/>
-</kw>
-<kw name="Click Login 1" library="login_keywords">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${url1_submit}</arg>
+<arg>${Next}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230905 11:49:54.484" level="INFO">Clicking element 'xpath://input[@name='submit']'.</msg>
-<status status="PASS" starttime="20230905 11:49:54.483" endtime="20230905 11:49:55.717"/>
+<msg timestamp="20230907 12:04:59.903" level="INFO">Clicking element 'xpath://button/span[.='Next']'.</msg>
+<status status="PASS" starttime="20230907 12:04:59.903" endtime="20230907 12:04:59.988"/>
 </kw>
-<status status="PASS" starttime="20230905 11:49:54.483" endtime="20230905 11:49:55.718"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>35</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230907 12:05:34.989" level="INFO">Slept 35 seconds</msg>
+<status status="PASS" starttime="20230907 12:04:59.989" endtime="20230907 12:05:34.989"/>
 </kw>
-<kw name="Close The URL" library="common_keywords">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230905 11:49:55.721" endtime="20230905 11:49:58.033"/>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230907 12:05:34.989" endtime="20230907 12:05:34.998"/>
 </kw>
-<status status="PASS" starttime="20230905 11:49:55.719" endtime="20230905 11:49:58.033"/>
+<status status="PASS" starttime="20230907 12:04:52.031" endtime="20230907 12:05:34.999"/>
 </kw>
-<status status="PASS" starttime="20230905 11:49:48.994" endtime="20230905 11:49:58.033"/>
-</test>
-<test id="s1-s1-s1-s1-s1-t2" name="Login into URL2" line="14">
-<kw name="Open URL2" library="loginPO">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${LOGIN_URL2}</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230905 11:49:58.033" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/parabank/index.htm'.</msg>
-<status status="PASS" starttime="20230905 11:49:58.033" endtime="20230905 11:50:04.279"/>
+<kw name="Validate Login" library="HROS_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Top_Menu_Profile}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230907 12:05:34.999" endtime="20230907 12:05:35.088"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230905 11:50:04.279" endtime="20230905 11:50:04.405"/>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${Top_Menu_Profile}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230907 12:05:35.102" level="INFO">Current page contains element 'xpath://div[@class='Header___1wPd_']/div[2]/span'.</msg>
+<status status="PASS" starttime="20230907 12:05:35.088" endtime="20230907 12:05:35.102"/>
 </kw>
-<status status="PASS" starttime="20230905 11:49:58.033" endtime="20230905 11:50:04.405"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}HR-OS Login Successful</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230907 12:05:35.102" endtime="20230907 12:05:35.102"/>
 </kw>
-<kw name="Login For URL" library="common_keywords">
-<arg>ChanikyaVarma</arg>
-<arg>Kingkong@7</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${url_username}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230905 11:50:04.405" level="INFO">Typing text 'ChanikyaVarma' into text field 'xpath://input[contains(@name,'user')]'.</msg>
-<status status="PASS" starttime="20230905 11:50:04.405" endtime="20230905 11:50:04.558"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${url_password}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230905 11:50:04.558" level="INFO">Typing text 'Kingkong@7' into text field 'xpath://input[contains(@name,'password')]'.</msg>
-<status status="PASS" starttime="20230905 11:50:04.558" endtime="20230905 11:50:04.644"/>
-</kw>
-<status status="PASS" starttime="20230905 11:50:04.405" endtime="20230905 11:50:04.644"/>
-</kw>
-<kw name="Click Login 2" library="login_keywords">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${url2_submit}</arg>
+<arg>${Top_Menu_Profile}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230905 11:50:04.644" level="INFO">Clicking element 'xpath://input[@value='Log In']'.</msg>
-<status status="PASS" starttime="20230905 11:50:04.644" endtime="20230905 11:50:05.451"/>
+<msg timestamp="20230907 12:05:35.102" level="INFO">Clicking element 'xpath://div[@class='Header___1wPd_']/div[2]/span'.</msg>
+<status status="PASS" starttime="20230907 12:05:35.102" endtime="20230907 12:05:35.194"/>
 </kw>
-<status status="PASS" starttime="20230905 11:50:04.644" endtime="20230905 11:50:05.451"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230907 12:05:38.195" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230907 12:05:35.194" endtime="20230907 12:05:38.195"/>
 </kw>
-<kw name="Close The URL" library="common_keywords">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230905 11:50:05.452" endtime="20230905 11:50:07.725"/>
+<status status="PASS" starttime="20230907 12:05:34.999" endtime="20230907 12:05:38.195"/>
 </kw>
-<status status="PASS" starttime="20230905 11:50:05.452" endtime="20230905 11:50:07.725"/>
-</kw>
-<status status="PASS" starttime="20230905 11:49:58.033" endtime="20230905 11:50:07.725"/>
+<tag>login</tag>
+<status status="PASS" starttime="20230907 12:04:42.583" endtime="20230907 12:05:38.195"/>
 </test>
-<status status="PASS" starttime="20230905 11:49:48.764" endtime="20230905 11:50:07.725"/>
+<test id="s1-s1-s1-s1-s1-t2" name="Validate Left Menu Options" line="18">
+<kw name="Check Left Options" library="HROS_keywords">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Left_Menu_Home}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230907 12:05:38.195" level="INFO">Simulating Mouse Over on element 'xpath:(//span[@class='ant-menu-title-content'])[1]'.</msg>
+<status status="PASS" starttime="20230907 12:05:38.195" endtime="20230907 12:05:38.524"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Left_Menu_Home}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230907 12:05:38.526" level="INFO">Clicking element 'xpath:(//span[@class='ant-menu-title-content'])[1]'.</msg>
+<status status="PASS" starttime="20230907 12:05:38.524" endtime="20230907 12:05:38.678"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230907 12:05:41.678" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230907 12:05:38.678" endtime="20230907 12:05:41.678"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Left_Menu_Dashboard}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230907 12:05:41.678" level="INFO">Simulating Mouse Over on element 'xpath:(//span[@class='ant-menu-title-content'])[2]'.</msg>
+<status status="PASS" starttime="20230907 12:05:41.678" endtime="20230907 12:05:41.982"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Left_Menu_Dashboard}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230907 12:05:41.982" level="INFO">Clicking element 'xpath:(//span[@class='ant-menu-title-content'])[2]'.</msg>
+<status status="PASS" starttime="20230907 12:05:41.982" endtime="20230907 12:05:42.092"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230907 12:05:45.093" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230907 12:05:42.092" endtime="20230907 12:05:45.093"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Left_Menu_Directory}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230907 12:05:45.094" level="INFO">Simulating Mouse Over on element 'xpath:(//span[@class='ant-menu-title-content'])[3]'.</msg>
+<status status="PASS" starttime="20230907 12:05:45.093" endtime="20230907 12:05:45.413"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Left_Menu_Directory}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230907 12:05:45.414" level="INFO">Clicking element 'xpath:(//span[@class='ant-menu-title-content'])[3]'.</msg>
+<status status="PASS" starttime="20230907 12:05:45.413" endtime="20230907 12:05:45.496"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230907 12:05:50.496" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230907 12:05:45.496" endtime="20230907 12:05:50.496"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Left_Menu_Onboarding}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230907 12:05:50.496" level="INFO">Simulating Mouse Over on element 'xpath:(//span[@class='ant-menu-title-content'])[4]'.</msg>
+<status status="PASS" starttime="20230907 12:05:50.496" endtime="20230907 12:05:50.784"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Left_Menu_Onboarding}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230907 12:05:50.784" level="INFO">Clicking element 'xpath:(//span[@class='ant-menu-title-content'])[4]'.</msg>
+<status status="PASS" starttime="20230907 12:05:50.784" endtime="20230907 12:05:50.889"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230907 12:05:53.890" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230907 12:05:50.889" endtime="20230907 12:05:53.890"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Left_Menu_Offboarding}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230907 12:05:53.890" level="INFO">Simulating Mouse Over on element 'xpath:(//span[@class='ant-menu-title-content'])[5]'.</msg>
+<status status="PASS" starttime="20230907 12:05:53.890" endtime="20230907 12:05:54.181"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Left_Menu_Offboarding}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230907 12:05:54.181" level="INFO">Clicking element 'xpath:(//span[@class='ant-menu-title-content'])[5]'.</msg>
+<status status="PASS" starttime="20230907 12:05:54.181" endtime="20230907 12:05:54.277"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230907 12:05:57.278" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230907 12:05:54.277" endtime="20230907 12:05:57.278"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Left_Menu_TimeSheet}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230907 12:05:57.280" level="INFO">Simulating Mouse Over on element 'xpath:(//span[@class='ant-menu-title-content'])[7]'.</msg>
+<status status="PASS" starttime="20230907 12:05:57.279" endtime="20230907 12:05:57.614"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Left_Menu_TimeSheet}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230907 12:05:57.614" level="INFO">Clicking element 'xpath:(//span[@class='ant-menu-title-content'])[7]'.</msg>
+<status status="PASS" starttime="20230907 12:05:57.614" endtime="20230907 12:05:57.701"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230907 12:06:00.702" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230907 12:05:57.701" endtime="20230907 12:06:00.702"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Left_Menu_Reports}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230907 12:06:00.702" level="INFO">Simulating Mouse Over on element 'xpath:(//span[@class='ant-menu-title-content'])[8]'.</msg>
+<status status="PASS" starttime="20230907 12:06:00.702" endtime="20230907 12:06:01.015"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Left_Menu_Reports}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230907 12:06:01.015" level="INFO">Clicking element 'xpath:(//span[@class='ant-menu-title-content'])[8]'.</msg>
+<status status="PASS" starttime="20230907 12:06:01.015" endtime="20230907 12:06:01.115"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230907 12:06:04.115" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230907 12:06:01.115" endtime="20230907 12:06:04.115"/>
+</kw>
+<status status="PASS" starttime="20230907 12:05:38.195" endtime="20230907 12:06:04.115"/>
+</kw>
+<tag>left</tag>
+<status status="PASS" starttime="20230907 12:05:38.195" endtime="20230907 12:06:04.115"/>
+</test>
+<status status="PASS" starttime="20230907 12:04:42.332" endtime="20230907 12:06:04.115"/>
 </suite>
-<status status="PASS" starttime="20230905 11:49:48.748" endtime="20230905 11:50:07.740"/>
+<status status="PASS" starttime="20230907 12:04:42.332" endtime="20230907 12:06:04.115"/>
 </suite>
-<status status="PASS" starttime="20230905 11:49:48.748" endtime="20230905 11:50:07.740"/>
+<status status="PASS" starttime="20230907 12:04:42.332" endtime="20230907 12:06:04.115"/>
 </suite>
-<status status="PASS" starttime="20230905 11:49:48.748" endtime="20230905 11:50:07.756"/>
+<status status="PASS" starttime="20230907 12:04:42.332" endtime="20230907 12:06:04.115"/>
 </suite>
-<status status="PASS" starttime="20230905 11:49:48.732" endtime="20230905 11:50:07.756"/>
+<status status="PASS" starttime="20230907 12:04:42.301" endtime="20230907 12:06:04.115"/>
 </suite>
 <statistics>
 <total>
 <stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">left</stat>
+<stat pass="1" fail="0" skip="0">login</stat>
 </tag>
 <suite>
 <stat pass="2" fail="0" skip="0" id="s1" name="MyProject Root Folder">MyProject Root Folder</stat>
 <stat pass="2" fail="0" skip="0" id="s1-s1" name="Framework">MyProject Root Folder.Framework</stat>
 <stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="TestCycles">MyProject Root Folder.Framework.TestCycles</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1" name="Module 2">MyProject Root Folder.Framework.TestCycles.Module 2</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="TestCase For Login">MyProject Root Folder.Framework.TestCycles.Module 2.TestCase For Login</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1" name="Module 3">MyProject Root Folder.Framework.TestCycles.Module 3</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="TestCase For HR-OS">MyProject Root Folder.Framework.TestCycles.Module 3.TestCase For HR-OS</stat>
 </suite>
 </statistics>
 <errors>
