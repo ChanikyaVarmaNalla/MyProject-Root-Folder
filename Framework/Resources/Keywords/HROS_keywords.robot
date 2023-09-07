@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    Collections
+Library    DateTime
 Resource    Framework/Resources/Variables/HROS_variables.robot
 
 *** Keywords ***
@@ -127,3 +128,38 @@ Check Left Options
     Mouse Over    ${Left_Menu_Reports}
     Click Element    ${Left_Menu_Reports}
     Sleep    3
+
+
+Get the Dates
+    ${Today_Date}=    Get Current Date    result_format=%Y-%m-%d
+    ${year}=    Convert To String    ${Today_Date.split('-')[0]}
+    ${month}=    Convert To String    ${Today_Date.split('-')[1]}
+    ${day}=    Convert To Integer    ${Today_Date.split('-')[2]}
+    ${date_list}=    Create List
+    ${day_of_week}=    Evaluate    datetime.datetime.strptime('${Today_Date}', '%Y-%m-%d').strftime('%A')
+    WHILE    len(${date_list}) < 5
+        IF    '${day_of_week}' not in ['Saturday', 'Sunday']
+            ${day_len}=    Evaluate    len('${day}')
+            IF    ${day_len} < 2
+                Append To List    ${date_list}    ${year}-${month}-0${day}
+            ELSE
+                Append To List    ${date_list}    ${year}-${month}-${day}
+            END
+        END
+        ${day}=    Evaluate    ${day} + 1
+        ${Today_Date}=    Set Variable    ${year}-${month}-${day}
+        ${day_of_week}=    Evaluate    datetime.datetime.strptime('${Today_Date}', '%Y-%m-%d').strftime('%A')
+    END
+    [Return]    ${date_list}
+
+Fill Time Sheet for a week on Dialy basis
+	[Arguments]    ${fromtime}    ${totime}
+	Wait Until Element Is Visible    ${Left_Menu_TimeSheet}
+	Mouse Over    ${Left_Menu_TimeSheet}
+	Click Element    ${Left_Menu_TimeSheet}
+	Sleep    5
+    ${dates}    Get The Dates
+    FOR    ${i}     IN RANGE    @{dates}
+        Click Element    ${TimeSheet_AddTask}
+        Sleep    3
+        Select Frame    ${TimeSheet_iFrame}

@@ -46,3 +46,23 @@ ${Left_Menu_Onboarding}    xpath:(//span[@class='ant-menu-title-content'])[4]
 ${Left_Menu_Offboarding}    xpath:(//span[@class='ant-menu-title-content'])[5]
 ${Left_Menu_TimeSheet}    xpath:(//span[@class='ant-menu-title-content'])[7]
 ${Left_Menu_Reports}    xpath:(//span[@class='ant-menu-title-content'])[8]
+
+
+# TimeSheet Filling Variables
+${TimeSheet_Daily}    xpath://div[@class='left___1yDzz']/div[1]/label[1]
+${TimeSheet_Weekly}    xpath://div[@class='left___1yDzz']/div[1]/label[2]
+${TimeSheet_AddTask}    xpath://div[@class='right___IuPRy']/button[3]
+${TimeSheet_BackDate}    xpath://div[@class='MyArrowDatePicker']/button[1]
+${TimeSheet_NextDate}    xpath://div[@class='MyArrowDatePicker']/button[2]
+${TimeSheet_iFrame}    id:I0_1694062453459
+${TimeSheet_StartDate}    xpath://input[@placeholder='Start date']
+${TimeSheet_EndDate}    xpath://input[@placeholder='End date']
+${TimeSheet_StartTime}    xpath://input[@id='basic_tasks_0_startTime']
+${TimeSheet_EndTime}    xpath://input[@id='basic_tasks_0_endTime']
+${TimeSheet_Project}    xpath://input[@id='basic_tasks_0_projectId']
+${TimeSheet_TaskName}    xpath://input[@id='basic_tasks_0_taskName']
+${TimeSheet_TaskDescription}    xpath://textarea[@id='basic_tasks_0_notes']
+${TimeSheet_SubmitButton}    xpath://div[@class='footer___2ao1m']/button[2]
+
+${TimeSheet_TaskUpdate}    xpath://div[@class='actionsButton___12SV-']/img[1]
+${TimeSheet_TaskDelete}    xpath://div[@class='actionsButton___12SV-']/img[3]

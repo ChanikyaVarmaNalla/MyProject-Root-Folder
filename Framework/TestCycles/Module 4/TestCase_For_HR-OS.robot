@@ -10,3 +10,6 @@ Login To HROS
     Open HROS
     Login HROS    chanikya.varma@terralogic.com    Hiddenleaf@7
     Validate Login
+
+Fill TimeSheet Daily
+    Fill Time Sheet For A Week On Dialy Basis    9:00 am    6:00 pm
