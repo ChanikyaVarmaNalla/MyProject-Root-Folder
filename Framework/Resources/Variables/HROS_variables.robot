@@ -53,8 +53,9 @@ ${TimeSheet_Daily}    xpath://div[@class='left___1yDzz']/div[1]/label[1]
 ${TimeSheet_Weekly}    xpath://div[@class='left___1yDzz']/div[1]/label[2]
 ${TimeSheet_AddTask}    xpath://div[@class='right___IuPRy']/button[3]
 ${TimeSheet_BackDate}    xpath://div[@class='MyArrowDatePicker']/button[1]
+${TimeSheet_CurrentDate}    xpath://div[@class='MyArrowDatePicker']/div
 ${TimeSheet_NextDate}    xpath://div[@class='MyArrowDatePicker']/button[2]
-${TimeSheet_iFrame}    id:I0_1694062453459
+#${TimeSheet_iFrame}    id:I0_1694062453459
 ${TimeSheet_StartDate}    xpath://input[@placeholder='Start date']
 ${TimeSheet_EndDate}    xpath://input[@placeholder='End date']
 ${TimeSheet_StartTime}    xpath://input[@id='basic_tasks_0_startTime']
@@ -65,4 +66,8 @@ ${TimeSheet_TaskDescription}    xpath://textarea[@id='basic_tasks_0_notes']
 ${TimeSheet_SubmitButton}    xpath://div[@class='footer___2ao1m']/button[2]
 
 ${TimeSheet_TaskUpdate}    xpath://div[@class='actionsButton___12SV-']/img[1]
+${TimeSheet_TaskUpdate_Description}    xpath://textarea[@id='basic_notes']
+${TimeSheet_TaskUpdate_Button}    xpath://button[.='Update']
+
 ${TimeSheet_TaskDelete}    xpath://div[@class='actionsButton___12SV-']/img[3]
+${TimeSheet_TaskDelete_Yes}    xpath://button[@type='submit']

@@ -7,7 +7,7 @@ Resource    Framework/Resources/Variables/HROS_variables.robot
 *** Keywords ***
 Login HROS
     [Arguments]    ${username}    ${password}
-    Wait Until Element Is Visible    ${Google_Login}
+    Wait Until Element Is Visible    ${Google_Login}    15s
     Click Element    ${Google_Login}
     Sleep    3
     ${handles}    Get Window Handles
@@ -136,30 +136,111 @@ Get the Dates
     ${month}=    Convert To String    ${Today_Date.split('-')[1]}
     ${day}=    Convert To Integer    ${Today_Date.split('-')[2]}
     ${date_list}=    Create List
-    ${day_of_week}=    Evaluate    datetime.datetime.strptime('${Today_Date}', '%Y-%m-%d').strftime('%A')
-    WHILE    len(${date_list}) < 5
-        IF    '${day_of_week}' not in ['Saturday', 'Sunday']
+    WHILE    len(${date_list}) < 7
             ${day_len}=    Evaluate    len('${day}')
             IF    ${day_len} < 2
                 Append To List    ${date_list}    ${year}-${month}-0${day}
             ELSE
                 Append To List    ${date_list}    ${year}-${month}-${day}
             END
-        END
         ${day}=    Evaluate    ${day} + 1
         ${Today_Date}=    Set Variable    ${year}-${month}-${day}
-        ${day_of_week}=    Evaluate    datetime.datetime.strptime('${Today_Date}', '%Y-%m-%d').strftime('%A')
     END
     [Return]    ${date_list}
 
-Fill Time Sheet for a week on Dialy basis
-	[Arguments]    ${fromtime}    ${totime}
+Fill Time Sheet for a week on Daily basis
+	[Arguments]    ${fromtime}    ${totime}    ${project}    ${task}    ${description}
 	Wait Until Element Is Visible    ${Left_Menu_TimeSheet}
 	Mouse Over    ${Left_Menu_TimeSheet}
 	Click Element    ${Left_Menu_TimeSheet}
 	Sleep    5
     ${dates}    Get The Dates
-    FOR    ${i}     IN RANGE    @{dates}
+    FOR    ${i}    IN    @{dates}[0:1]
+    	Set Selenium Speed    2s
         Click Element    ${TimeSheet_AddTask}
+        Click Element    ${TimeSheet_StartDate}
+        Press Keys    ${TimeSheet_StartDate}    ${i}    ENTER
+        Press Keys    ${TimeSheet_EndDate}     ${i}    ENTER
+        Press Keys    ${TimeSheet_StartTime}    ${fromtime}    ENTER
+        Press Keys    ${TimeSheet_EndTime}    ${totime}    ENTER
+        Press Keys    ${TimeSheet_Project}    ${project}    ENTER
+        Press Keys    ${TimeSheet_TaskName}    ${task}
+        Click Element    ${TimeSheet_TaskDescription}
+        Input Text    ${TimeSheet_TaskDescription}    ${description}
+        Click Element    ${TimeSheet_SubmitButton}
         Sleep    3
-        Select Frame    ${TimeSheet_iFrame}
+    END
+
+Fill Time Sheet for a week on Weekly basis
+	[Arguments]    ${fromtime}    ${totime}    ${project}    ${task}    ${description}
+	Wait Until Element Is Visible    ${Left_Menu_TimeSheet}
+	Mouse Over    ${Left_Menu_TimeSheet}
+	Click Element    ${Left_Menu_TimeSheet}
+	Sleep    5
+    ${dates}    Get The Dates
+    Set Selenium Speed    2s
+    Click Element    ${TimeSheet_AddTask}
+    Click Element    ${TimeSheet_StartDate}
+    Press Keys    ${TimeSheet_StartDate}    ${dates}[0]    ENTER
+    Press Keys    ${TimeSheet_EndDate}     ${dates}[-1]    ENTER
+    Press Keys    ${TimeSheet_StartTime}    ${fromtime}    ENTER
+    Press Keys    ${TimeSheet_EndTime}    ${totime}    ENTER
+    Press Keys    ${TimeSheet_Project}    ${project}    ENTER
+    Press Keys    ${TimeSheet_TaskName}    ${task}
+    Click Element    ${TimeSheet_TaskDescription}
+    Input Text    ${TimeSheet_TaskDescription}    ${description}
+    Click Element    ${TimeSheet_SubmitButton}
+    Sleep    3
+
+Update Newly Created TimeSheet For Daily
+    [Arguments]    ${new_description}
+    Wait Until Element Is Visible    ${Left_Menu_TimeSheet}
+    Mouse Over    ${Left_Menu_TimeSheet}
+    Click Element    ${Left_Menu_TimeSheet}
+    Sleep    5
+    Set Selenium Speed    2s
+    Mouse Over    ${TimeSheet_TaskUpdate}
+    Click Element    ${TimeSheet_TaskUpdate}
+    Click Element    ${TimeSheet_TaskUpdate_Description}
+    Input Text    ${TimeSheet_TaskUpdate_Description}    ${new_description}
+    Click Element    ${TimeSheet_TaskUpdate_Button}
+    Sleep    5
+
+Update Newly Created TimeSheet For Weekly
+	[Arguments]    ${new_description}
+	Wait Until Element Is Visible    ${Left_Menu_TimeSheet}
+    Mouse Over    ${Left_Menu_TimeSheet}
+    Click Element    ${Left_Menu_TimeSheet}
+    Sleep    10
+    ${days}    Get The Dates
+    FOR    ${i}    IN    @{days}
+    	Set Selenium Speed    3s
+        Click Element    ${TimeSheet_TaskUpdate}
+        Click Element    ${TimeSheet_TaskUpdate_Description}
+        Input Text    ${TimeSheet_TaskUpdate_Description}    ${new_description}
+        Click Element    ${TimeSheet_TaskUpdate_Button}
+        Sleep    5
+        Click Element    ${TimeSheet_NextDate}
+    END
+
+
+Delete Newly Created TimeSheet For Daily
+	Wait Until Element Is Visible    ${Left_Menu_TimeSheet}
+    Mouse Over    ${Left_Menu_TimeSheet}
+    Click Element    ${Left_Menu_TimeSheet}
+    Sleep    10
+    Set Selenium Speed    2s
+    Click Element    ${TimeSheet_TaskDelete}
+    Click Element    ${TimeSheet_TaskDelete_Yes}
+
+Delete Newly Created TimeSheet For Weekly
+    Wait Until Element Is Visible    ${Left_Menu_TimeSheet}
+    Mouse Over    ${Left_Menu_TimeSheet}
+    Click Element    ${Left_Menu_TimeSheet}
+    Sleep    10
+    ${days}    Get The Dates
+    FOR    ${i}    IN   @{days}
+    	Set Selenium Speed    3s
+        Click Element    ${TimeSheet_TaskDelete}
+        Click Element    ${TimeSheet_TaskDelete_Yes}
+    END
