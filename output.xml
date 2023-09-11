@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.2 on win32)" generated="20230908 17:46:14.814" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.2 on win32)" generated="20230909 21:29:58.843" rpa="false" schemaversion="4">
 <suite id="s1" name="MyProject Root Folder" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder">
 <suite id="s1-s1" name="Framework" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework">
 <suite id="s1-s1-s1" name="TestCycles" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles">
@@ -11,14 +11,14 @@
 <arg>${HROS_URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230908 17:46:15.084" level="INFO">Opening browser 'chrome' to base url 'https://terralogic.paxanimi.ai/home'.</msg>
-<status status="PASS" starttime="20230908 17:46:15.084" endtime="20230908 17:46:19.676"/>
+<msg timestamp="20230909 21:29:59.134" level="INFO">Opening browser 'chrome' to base url 'https://terralogic.paxanimi.ai/home'.</msg>
+<status status="PASS" starttime="20230909 21:29:59.134" endtime="20230909 21:30:04.965"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230908 17:46:19.676" endtime="20230908 17:46:19.802"/>
+<status status="PASS" starttime="20230909 21:30:04.965" endtime="20230909 21:30:05.087"/>
 </kw>
-<status status="PASS" starttime="20230908 17:46:15.084" endtime="20230908 17:46:19.802"/>
+<status status="PASS" starttime="20230909 21:29:59.134" endtime="20230909 21:30:05.087"/>
 </kw>
 <kw name="Login HROS" library="HROS_keywords">
 <arg>chanikya.varma@terralogic.com</arg>
@@ -27,109 +27,109 @@
 <arg>${Google_Login}</arg>
 <arg>15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230908 17:46:19.802" endtime="20230908 17:46:20.782"/>
+<status status="PASS" starttime="20230909 21:30:05.087" endtime="20230909 21:30:05.975"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Google_Login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230908 17:46:20.782" level="INFO">Clicking element 'xpath://form[@id='basic']/button[2]'.</msg>
-<status status="PASS" starttime="20230908 17:46:20.782" endtime="20230908 17:46:20.845"/>
+<msg timestamp="20230909 21:30:05.978" level="INFO">Clicking element 'xpath://form[@id='basic']/button[2]'.</msg>
+<status status="PASS" starttime="20230909 21:30:05.978" endtime="20230909 21:30:06.043"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230908 17:46:23.847" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230908 17:46:20.845" endtime="20230908 17:46:23.847"/>
+<msg timestamp="20230909 21:30:09.044" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230909 21:30:06.043" endtime="20230909 21:30:09.044"/>
 </kw>
 <kw name="Get Window Handles" library="SeleniumLibrary">
 <var>${handles}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<msg timestamp="20230908 17:46:23.853" level="INFO">${handles} = ['A956F5D9DA243479669CC68B87ED3C6D', '5379C70DCB71C1F060113C29129DD00E']</msg>
-<status status="PASS" starttime="20230908 17:46:23.847" endtime="20230908 17:46:23.853"/>
+<msg timestamp="20230909 21:30:09.044" level="INFO">${handles} = ['CBF7D7051C06D6994B98B80E91CC0FE1', '1CF5E58301C3FC97611A522AA5E9402F']</msg>
+<status status="PASS" starttime="20230909 21:30:09.044" endtime="20230909 21:30:09.044"/>
 </kw>
 <kw name="Switch Window" library="SeleniumLibrary">
 <arg>${handles}[1]</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20230908 17:46:23.853" endtime="20230908 17:46:23.904"/>
+<status status="PASS" starttime="20230909 21:30:09.044" endtime="20230909 21:30:09.108"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Email}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230908 17:46:23.905" level="INFO">Typing text 'chanikya.varma@terralogic.com' into text field 'id:identifierId'.</msg>
-<status status="PASS" starttime="20230908 17:46:23.904" endtime="20230908 17:46:24.798"/>
+<msg timestamp="20230909 21:30:09.116" level="INFO">Typing text 'chanikya.varma@terralogic.com' into text field 'id:identifierId'.</msg>
+<status status="PASS" starttime="20230909 21:30:09.116" endtime="20230909 21:30:10.900"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Next}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230908 17:46:24.799" level="INFO">Clicking element 'xpath://button/span[.='Next']'.</msg>
-<status status="PASS" starttime="20230908 17:46:24.798" endtime="20230908 17:46:24.979"/>
+<msg timestamp="20230909 21:30:10.900" level="INFO">Clicking element 'xpath://button/span[.='Next']'.</msg>
+<status status="PASS" starttime="20230909 21:30:10.900" endtime="20230909 21:30:11.171"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230908 17:46:27.980" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230908 17:46:24.979" endtime="20230908 17:46:27.980"/>
+<msg timestamp="20230909 21:30:14.172" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230909 21:30:11.171" endtime="20230909 21:30:14.172"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${pass}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230908 17:46:27.980" level="INFO">Typing text 'Hiddenleaf@7' into text field 'name:Passwd'.</msg>
-<status status="PASS" starttime="20230908 17:46:27.980" endtime="20230908 17:46:28.094"/>
+<msg timestamp="20230909 21:30:14.172" level="INFO">Typing text 'Hiddenleaf@7' into text field 'name:Passwd'.</msg>
+<status status="PASS" starttime="20230909 21:30:14.172" endtime="20230909 21:30:14.299"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Next}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230908 17:46:28.094" level="INFO">Clicking element 'xpath://button/span[.='Next']'.</msg>
-<status status="PASS" starttime="20230908 17:46:28.094" endtime="20230908 17:46:28.178"/>
+<msg timestamp="20230909 21:30:14.302" level="INFO">Clicking element 'xpath://button/span[.='Next']'.</msg>
+<status status="PASS" starttime="20230909 21:30:14.302" endtime="20230909 21:30:14.389"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>35</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230908 17:47:03.179" level="INFO">Slept 35 seconds</msg>
-<status status="PASS" starttime="20230908 17:46:28.179" endtime="20230908 17:47:03.179"/>
+<msg timestamp="20230909 21:30:49.389" level="INFO">Slept 35 seconds</msg>
+<status status="PASS" starttime="20230909 21:30:14.389" endtime="20230909 21:30:49.389"/>
 </kw>
 <kw name="Switch Window" library="SeleniumLibrary">
 <arg>${handles}[0]</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20230908 17:47:03.179" endtime="20230908 17:47:03.179"/>
+<status status="PASS" starttime="20230909 21:30:49.389" endtime="20230909 21:30:49.389"/>
 </kw>
-<status status="PASS" starttime="20230908 17:46:19.802" endtime="20230908 17:47:03.179"/>
+<status status="PASS" starttime="20230909 21:30:05.087" endtime="20230909 21:30:49.389"/>
 </kw>
 <kw name="Validate Login" library="HROS_keywords">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Top_Menu_Profile}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230908 17:47:03.179" endtime="20230908 17:47:03.210"/>
+<status status="PASS" starttime="20230909 21:30:49.389" endtime="20230909 21:30:49.421"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>${Top_Menu_Profile}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20230908 17:47:03.210" level="INFO">Current page contains element 'xpath://div[@class='Header___1wPd_']/div[2]/span'.</msg>
-<status status="PASS" starttime="20230908 17:47:03.210" endtime="20230908 17:47:03.210"/>
+<msg timestamp="20230909 21:30:49.436" level="INFO">Current page contains element 'xpath://div[@class='Header___1wPd_']/div[2]/span'.</msg>
+<status status="PASS" starttime="20230909 21:30:49.421" endtime="20230909 21:30:49.436"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${\n}HR-OS Login Successful</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230908 17:47:03.210" endtime="20230908 17:47:03.210"/>
+<status status="PASS" starttime="20230909 21:30:49.436" endtime="20230909 21:30:49.436"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Top_Menu_Profile}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230908 17:47:03.226" level="INFO">Clicking element 'xpath://div[@class='Header___1wPd_']/div[2]/span'.</msg>
-<status status="PASS" starttime="20230908 17:47:03.226" endtime="20230908 17:47:03.301"/>
+<msg timestamp="20230909 21:30:49.436" level="INFO">Clicking element 'xpath://div[@class='Header___1wPd_']/div[2]/span'.</msg>
+<status status="PASS" starttime="20230909 21:30:49.436" endtime="20230909 21:30:49.507"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230908 17:47:06.302" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230908 17:47:03.301" endtime="20230908 17:47:06.302"/>
+<msg timestamp="20230909 21:30:52.508" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230909 21:30:49.507" endtime="20230909 21:30:52.508"/>
 </kw>
-<status status="PASS" starttime="20230908 17:47:03.179" endtime="20230908 17:47:06.302"/>
+<status status="PASS" starttime="20230909 21:30:49.389" endtime="20230909 21:30:52.508"/>
 </kw>
 <tag>login</tag>
-<status status="PASS" starttime="20230908 17:46:15.084" endtime="20230908 17:47:06.302"/>
+<status status="PASS" starttime="20230909 21:29:59.134" endtime="20230909 21:30:52.508"/>
 </test>
 <test id="s1-s1-s1-s1-s1-t2" name="Update TimeSheet Daily And Weekly" line="20">
 <kw name="Update Newly Created TimeSheet For Weekly" library="HROS_keywords">
@@ -137,25 +137,25 @@
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Left_Menu_TimeSheet}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230908 17:47:06.302" endtime="20230908 17:47:06.334"/>
+<status status="PASS" starttime="20230909 21:30:52.508" endtime="20230909 21:30:52.524"/>
 </kw>
 <kw name="Mouse Over" library="SeleniumLibrary">
 <arg>${Left_Menu_TimeSheet}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20230908 17:47:06.334" level="INFO">Simulating Mouse Over on element 'xpath:(//span[@class='ant-menu-title-content'])[7]'.</msg>
-<status status="PASS" starttime="20230908 17:47:06.334" endtime="20230908 17:47:06.624"/>
+<msg timestamp="20230909 21:30:52.524" level="INFO">Simulating Mouse Over on element 'xpath:(//span[@class='ant-menu-title-content'])[7]'.</msg>
+<status status="PASS" starttime="20230909 21:30:52.524" endtime="20230909 21:30:52.826"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Left_Menu_TimeSheet}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230908 17:47:06.625" level="INFO">Clicking element 'xpath:(//span[@class='ant-menu-title-content'])[7]'.</msg>
-<status status="PASS" starttime="20230908 17:47:06.624" endtime="20230908 17:47:06.742"/>
+<msg timestamp="20230909 21:30:52.826" level="INFO">Clicking element 'xpath:(//span[@class='ant-menu-title-content'])[7]'.</msg>
+<status status="PASS" starttime="20230909 21:30:52.826" endtime="20230909 21:30:52.947"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20230908 17:47:06.743" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.948" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230909 21:30:52.947" endtime="20230909 21:31:02.948"/>
 </kw>
 <kw name="Get the Dates" library="HROS_keywords">
 <var>${days}</var>
@@ -163,35 +163,35 @@
 <var>${Today_Date}</var>
 <arg>result_format=%Y-%m-%d</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${Today_Date} = 2023-09-08</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.948" level="INFO">${Today_Date} = 2023-09-09</msg>
+<status status="PASS" starttime="20230909 21:31:02.948" endtime="20230909 21:31:02.948"/>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <var>${year}</var>
 <arg>${Today_Date.split('-')[0]}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${year} = 2023</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.948" level="INFO">${year} = 2023</msg>
+<status status="PASS" starttime="20230909 21:31:02.948" endtime="20230909 21:31:02.948"/>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <var>${month}</var>
 <arg>${Today_Date.split('-')[1]}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${month} = 09</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.948" level="INFO">${month} = 09</msg>
+<status status="PASS" starttime="20230909 21:31:02.948" endtime="20230909 21:31:02.948"/>
 </kw>
 <kw name="Convert To Integer" library="BuiltIn">
 <var>${day}</var>
 <arg>${Today_Date.split('-')[2]}</arg>
 <doc>Converts the given item to an integer number.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${day} = 8</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.948" level="INFO">${day} = 9</msg>
+<status status="PASS" starttime="20230909 21:31:02.948" endtime="20230909 21:31:02.948"/>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <var>${date_list}</var>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${date_list} = []</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.948" level="INFO">${date_list} = []</msg>
+<status status="PASS" starttime="20230909 21:31:02.948" endtime="20230909 21:31:02.948"/>
 </kw>
 <while condition="len(${date_list}) &lt; 7">
 <iter>
@@ -199,8 +199,8 @@
 <var>${day_len}</var>
 <arg>len('${day}')</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${day_len} = 1</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.964" level="INFO">${day_len} = 1</msg>
+<status status="PASS" starttime="20230909 21:31:02.948" endtime="20230909 21:31:02.964"/>
 </kw>
 <if>
 <branch type="IF" condition="${day_len} &lt; 2">
@@ -208,44 +208,44 @@
 <arg>${date_list}</arg>
 <arg>${year}-${month}-0${day}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </kw>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </branch>
 <branch type="ELSE">
 <kw name="Append To List" library="Collections">
 <arg>${date_list}</arg>
 <arg>${year}-${month}-${day}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="NOT RUN" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </kw>
-<status status="NOT RUN" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="NOT RUN" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </branch>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </if>
 <kw name="Evaluate" library="BuiltIn">
 <var>${day}</var>
 <arg>${day} + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${day} = 9</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.964" level="INFO">${day} = 10</msg>
+<status status="PASS" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${Today_Date}</var>
 <arg>${year}-${month}-${day}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${Today_Date} = 2023-09-9</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.964" level="INFO">${Today_Date} = 2023-09-10</msg>
+<status status="PASS" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </kw>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.948" endtime="20230909 21:31:02.964"/>
 </iter>
 <iter>
 <kw name="Evaluate" library="BuiltIn">
 <var>${day_len}</var>
 <arg>len('${day}')</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${day_len} = 1</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.964" level="INFO">${day_len} = 2</msg>
+<status status="PASS" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </kw>
 <if>
 <branch type="IF" condition="${day_len} &lt; 2">
@@ -253,44 +253,44 @@
 <arg>${date_list}</arg>
 <arg>${year}-${month}-0${day}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="NOT RUN" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </kw>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="NOT RUN" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </branch>
 <branch type="ELSE">
 <kw name="Append To List" library="Collections">
 <arg>${date_list}</arg>
 <arg>${year}-${month}-${day}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </kw>
-<status status="NOT RUN" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </branch>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </if>
 <kw name="Evaluate" library="BuiltIn">
 <var>${day}</var>
 <arg>${day} + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${day} = 10</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.964" level="INFO">${day} = 11</msg>
+<status status="PASS" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${Today_Date}</var>
 <arg>${year}-${month}-${day}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${Today_Date} = 2023-09-10</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.964" level="INFO">${Today_Date} = 2023-09-11</msg>
+<status status="PASS" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </kw>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </iter>
 <iter>
 <kw name="Evaluate" library="BuiltIn">
 <var>${day_len}</var>
 <arg>len('${day}')</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${day_len} = 2</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.964" level="INFO">${day_len} = 2</msg>
+<status status="PASS" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </kw>
 <if>
 <branch type="IF" condition="${day_len} &lt; 2">
@@ -298,44 +298,44 @@
 <arg>${date_list}</arg>
 <arg>${year}-${month}-0${day}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="NOT RUN" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </kw>
-<status status="NOT RUN" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="NOT RUN" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.964"/>
 </branch>
 <branch type="ELSE">
 <kw name="Append To List" library="Collections">
 <arg>${date_list}</arg>
 <arg>${year}-${month}-${day}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.980" endtime="20230909 21:31:02.980"/>
 </kw>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.980"/>
 </branch>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.980"/>
 </if>
 <kw name="Evaluate" library="BuiltIn">
 <var>${day}</var>
 <arg>${day} + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${day} = 11</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.981" level="INFO">${day} = 12</msg>
+<status status="PASS" starttime="20230909 21:31:02.980" endtime="20230909 21:31:02.981"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${Today_Date}</var>
 <arg>${year}-${month}-${day}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${Today_Date} = 2023-09-11</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.981" level="INFO">${Today_Date} = 2023-09-12</msg>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.964" endtime="20230909 21:31:02.981"/>
 </iter>
 <iter>
 <kw name="Evaluate" library="BuiltIn">
 <var>${day_len}</var>
 <arg>len('${day}')</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${day_len} = 2</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.981" level="INFO">${day_len} = 2</msg>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
 <if>
 <branch type="IF" condition="${day_len} &lt; 2">
@@ -343,44 +343,44 @@
 <arg>${date_list}</arg>
 <arg>${year}-${month}-0${day}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="NOT RUN" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
-<status status="NOT RUN" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="NOT RUN" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </branch>
 <branch type="ELSE">
 <kw name="Append To List" library="Collections">
 <arg>${date_list}</arg>
 <arg>${year}-${month}-${day}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </branch>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </if>
 <kw name="Evaluate" library="BuiltIn">
 <var>${day}</var>
 <arg>${day} + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${day} = 12</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.981" level="INFO">${day} = 13</msg>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${Today_Date}</var>
 <arg>${year}-${month}-${day}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${Today_Date} = 2023-09-12</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.981" level="INFO">${Today_Date} = 2023-09-13</msg>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </iter>
 <iter>
 <kw name="Evaluate" library="BuiltIn">
 <var>${day_len}</var>
 <arg>len('${day}')</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${day_len} = 2</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.981" level="INFO">${day_len} = 2</msg>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
 <if>
 <branch type="IF" condition="${day_len} &lt; 2">
@@ -388,44 +388,44 @@
 <arg>${date_list}</arg>
 <arg>${year}-${month}-0${day}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="NOT RUN" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
-<status status="NOT RUN" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="NOT RUN" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </branch>
 <branch type="ELSE">
 <kw name="Append To List" library="Collections">
 <arg>${date_list}</arg>
 <arg>${year}-${month}-${day}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </branch>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </if>
 <kw name="Evaluate" library="BuiltIn">
 <var>${day}</var>
 <arg>${day} + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${day} = 13</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.981" level="INFO">${day} = 14</msg>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${Today_Date}</var>
 <arg>${year}-${month}-${day}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${Today_Date} = 2023-09-13</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.981" level="INFO">${Today_Date} = 2023-09-14</msg>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </iter>
 <iter>
 <kw name="Evaluate" library="BuiltIn">
 <var>${day_len}</var>
 <arg>len('${day}')</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${day_len} = 2</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.981" level="INFO">${day_len} = 2</msg>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
 <if>
 <branch type="IF" condition="${day_len} &lt; 2">
@@ -433,44 +433,44 @@
 <arg>${date_list}</arg>
 <arg>${year}-${month}-0${day}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="NOT RUN" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
-<status status="NOT RUN" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="NOT RUN" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </branch>
 <branch type="ELSE">
 <kw name="Append To List" library="Collections">
 <arg>${date_list}</arg>
 <arg>${year}-${month}-${day}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </branch>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </if>
 <kw name="Evaluate" library="BuiltIn">
 <var>${day}</var>
 <arg>${day} + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${day} = 14</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.981" level="INFO">${day} = 15</msg>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${Today_Date}</var>
 <arg>${year}-${month}-${day}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230908 17:47:16.744" level="INFO">${Today_Date} = 2023-09-14</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<msg timestamp="20230909 21:31:02.981" level="INFO">${Today_Date} = 2023-09-15</msg>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.744"/>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </iter>
 <iter>
 <kw name="Evaluate" library="BuiltIn">
 <var>${day_len}</var>
 <arg>len('${day}')</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230908 17:47:16.759" level="INFO">${day_len} = 2</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.760"/>
+<msg timestamp="20230909 21:31:02.981" level="INFO">${day_len} = 2</msg>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
 <if>
 <branch type="IF" condition="${day_len} &lt; 2">
@@ -478,222 +478,103 @@
 <arg>${date_list}</arg>
 <arg>${year}-${month}-0${day}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" starttime="20230908 17:47:16.760" endtime="20230908 17:47:16.760"/>
+<status status="NOT RUN" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </kw>
-<status status="NOT RUN" starttime="20230908 17:47:16.760" endtime="20230908 17:47:16.760"/>
+<status status="NOT RUN" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.981"/>
 </branch>
 <branch type="ELSE">
 <kw name="Append To List" library="Collections">
 <arg>${date_list}</arg>
 <arg>${year}-${month}-${day}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230908 17:47:16.760" endtime="20230908 17:47:16.760"/>
+<status status="PASS" starttime="20230909 21:31:02.997" endtime="20230909 21:31:02.997"/>
 </kw>
-<status status="PASS" starttime="20230908 17:47:16.760" endtime="20230908 17:47:16.760"/>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.997"/>
 </branch>
-<status status="PASS" starttime="20230908 17:47:16.760" endtime="20230908 17:47:16.760"/>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.997"/>
 </if>
 <kw name="Evaluate" library="BuiltIn">
 <var>${day}</var>
 <arg>${day} + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230908 17:47:16.760" level="INFO">${day} = 15</msg>
-<status status="PASS" starttime="20230908 17:47:16.760" endtime="20230908 17:47:16.761"/>
+<msg timestamp="20230909 21:31:02.997" level="INFO">${day} = 16</msg>
+<status status="PASS" starttime="20230909 21:31:02.997" endtime="20230909 21:31:02.997"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${Today_Date}</var>
 <arg>${year}-${month}-${day}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230908 17:47:16.761" level="INFO">${Today_Date} = 2023-09-15</msg>
-<status status="PASS" starttime="20230908 17:47:16.761" endtime="20230908 17:47:16.761"/>
+<msg timestamp="20230909 21:31:02.997" level="INFO">${Today_Date} = 2023-09-16</msg>
+<status status="PASS" starttime="20230909 21:31:02.997" endtime="20230909 21:31:02.997"/>
 </kw>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.761"/>
+<status status="PASS" starttime="20230909 21:31:02.981" endtime="20230909 21:31:02.997"/>
 </iter>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.761"/>
+<status status="PASS" starttime="20230909 21:31:02.948" endtime="20230909 21:31:02.997"/>
 </while>
-<msg timestamp="20230908 17:47:16.761" level="INFO">${days} = ['2023-09-08', '2023-09-09', '2023-09-10', '2023-09-11', '2023-09-12', '2023-09-13', '2023-09-14']</msg>
-<status status="PASS" starttime="20230908 17:47:16.744" endtime="20230908 17:47:16.761"/>
+<msg timestamp="20230909 21:31:02.997" level="INFO">${days} = ['2023-09-09', '2023-09-10', '2023-09-11', '2023-09-12', '2023-09-13', '2023-09-14', '2023-09-15']</msg>
+<status status="PASS" starttime="20230909 21:31:02.948" endtime="20230909 21:31:02.997"/>
 </kw>
 <for flavor="IN">
 <var>${i}</var>
 <value>@{days}</value>
 <iter>
-<var name="${i}">2023-09-08</var>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>3s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20230908 17:47:16.761" endtime="20230908 17:47:16.762"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${TimeSheet_TaskUpdate}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230908 17:47:16.762" level="INFO">Clicking element 'xpath://div[@class='actionsButton___12SV-']/img[1]'.</msg>
-<status status="PASS" starttime="20230908 17:47:16.762" endtime="20230908 17:47:22.961"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${TimeSheet_TaskUpdate_Description}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230908 17:47:22.961" level="INFO">Clicking element 'xpath://textarea[@id='basic_notes']'.</msg>
-<status status="PASS" starttime="20230908 17:47:22.961" endtime="20230908 17:47:29.027"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${TimeSheet_TaskUpdate_Description}</arg>
-<arg>${new_description}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230908 17:47:29.027" level="INFO">Typing text 'Worked on Automation Assignments.' into text field 'xpath://textarea[@id='basic_notes']'.</msg>
-<status status="PASS" starttime="20230908 17:47:29.027" endtime="20230908 17:47:38.405"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${TimeSheet_TaskUpdate_Button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230908 17:47:38.405" level="INFO">Clicking element 'xpath://button[.='Update']'.</msg>
-<status status="PASS" starttime="20230908 17:47:38.405" endtime="20230908 17:47:44.539"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230908 17:47:49.539" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230908 17:47:44.539" endtime="20230908 17:47:49.539"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${TimeSheet_NextDate}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230908 17:47:49.539" level="INFO">Clicking element 'xpath://div[@class='MyArrowDatePicker']/button[2]'.</msg>
-<status status="PASS" starttime="20230908 17:47:49.539" endtime="20230908 17:47:55.666"/>
-</kw>
-<status status="PASS" starttime="20230908 17:47:16.761" endtime="20230908 17:47:55.666"/>
-</iter>
-<iter>
 <var name="${i}">2023-09-09</var>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20230908 17:47:55.666" endtime="20230908 17:47:55.666"/>
+<status status="PASS" starttime="20230909 21:31:02.997" endtime="20230909 21:31:02.997"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${TimeSheet_TaskUpdate}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230908 17:47:55.666" level="INFO">Clicking element 'xpath://div[@class='actionsButton___12SV-']/img[1]'.</msg>
-<status status="PASS" starttime="20230908 17:47:55.666" endtime="20230908 17:48:01.865"/>
+<msg timestamp="20230909 21:31:02.997" level="INFO">Clicking element 'xpath://div[@class='actionsButton___12SV-']/img[1]'.</msg>
+<msg timestamp="20230909 21:31:09.181" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230909 21:31:09.181" level="FAIL">Element with locator 'xpath://div[@class='actionsButton___12SV-']/img[1]' not found.</msg>
+<status status="FAIL" starttime="20230909 21:31:02.997" endtime="20230909 21:31:09.181"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${TimeSheet_TaskUpdate_Description}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230908 17:48:01.865" level="INFO">Clicking element 'xpath://textarea[@id='basic_notes']'.</msg>
-<msg timestamp="20230908 17:48:04.905" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=116.0.5845.179)
-Stacktrace:
-Backtrace:
-	GetHandleVerifier [0x00007FF656483E62+57250]
-	(No symbol) [0x00007FF6563FBC02]
-	(No symbol) [0x00007FF6562CE0BB]
-	(No symbol) [0x00007FF6562ADD39]
-	(No symbol) [0x00007FF65632ABF7]
-	(No symbol) [0x00007FF65633D9DF]
-	(No symbol) [0x00007FF656326583]
-	(No symbol) [0x00007FF6562FCC71]
-	(No symbol) [0x00007FF6562FDE54]
-	GetHandleVerifier [0x00007FF656734CF2+2879026]
-	GetHandleVerifier [0x00007FF656786F30+3215472]
-	GetHandleVerifier [0x00007FF65677FD4F+3186319]
-	GetHandleVerifier [0x00007FF656515505+652869]
-	(No symbol) [0x00007FF656407518]
-	(No symbol) [0x00007FF6564035F4]
-	(No symbol) [0x00007FF6564036EC]
-	(No symbol) [0x00007FF6563F38E3]
-	BaseThreadInitThunk [0x00007FFC5D617614+20]
-	RtlUserThreadStart [0x00007FFC5F4A26B1+33]
-</msg>
-<msg timestamp="20230908 17:48:04.907" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=116.0.5845.179)
-Stacktrace:
-Backtrace:
-	GetHandleVerifier [0x00007FF656483E62+57250]
-	(No symbol) [0x00007FF6563FBC02]
-	(No symbol) [0x00007FF6562CE0BB]
-	(No symbol) [0x00007FF6562ADD39]
-	(No symbol) [0x00007FF65632ABF7]
-	(No symbol) [0x00007FF65633D9DF]
-	(No symbol) [0x00007FF656326583]
-	(No symbol) [0x00007FF6562FCC71]
-	(No symbol) [0x00007FF6562FDE54]
-	GetHandleVerifier [0x00007FF656734CF2+2879026]
-	GetHandleVerifier [0x00007FF656786F30+3215472]
-	GetHandleVerifier [0x00007FF65677FD4F+3186319]
-	GetHandleVerifier [0x00007FF656515505+652869]
-	(No symbol) [0x00007FF656407518]
-	(No symbol) [0x00007FF6564035F4]
-	(No symbol) [0x00007FF6564036EC]
-	(No symbol) [0x00007FF6563F38E3]
-	BaseThreadInitThunk [0x00007FFC5D617614+20]
-	RtlUserThreadStart [0x00007FFC5F4A26B1+33]
-</msg>
-<status status="FAIL" starttime="20230908 17:48:01.865" endtime="20230908 17:48:04.908"/>
+<status status="NOT RUN" starttime="20230909 21:31:09.181" endtime="20230909 21:31:09.181"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${TimeSheet_TaskUpdate_Description}</arg>
 <arg>${new_description}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230908 17:48:04.908" endtime="20230908 17:48:04.908"/>
+<status status="NOT RUN" starttime="20230909 21:31:09.181" endtime="20230909 21:31:09.181"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${TimeSheet_TaskUpdate_Button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230908 17:48:04.908" endtime="20230908 17:48:04.908"/>
+<status status="NOT RUN" starttime="20230909 21:31:09.181" endtime="20230909 21:31:09.181"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20230908 17:48:04.908" endtime="20230908 17:48:04.908"/>
+<status status="NOT RUN" starttime="20230909 21:31:09.181" endtime="20230909 21:31:09.181"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${TimeSheet_NextDate}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230908 17:48:04.908" endtime="20230908 17:48:04.908"/>
+<status status="NOT RUN" starttime="20230909 21:31:09.181" endtime="20230909 21:31:09.181"/>
 </kw>
-<status status="FAIL" starttime="20230908 17:47:55.666" endtime="20230908 17:48:04.908"/>
+<status status="FAIL" starttime="20230909 21:31:02.997" endtime="20230909 21:31:09.181"/>
 </iter>
-<status status="FAIL" starttime="20230908 17:47:16.761" endtime="20230908 17:48:04.908"/>
+<status status="FAIL" starttime="20230909 21:31:02.997" endtime="20230909 21:31:09.181"/>
 </for>
-<status status="FAIL" starttime="20230908 17:47:06.302" endtime="20230908 17:48:04.908"/>
+<status status="FAIL" starttime="20230909 21:30:52.508" endtime="20230909 21:31:09.181"/>
 </kw>
-<status status="FAIL" starttime="20230908 17:47:06.302" endtime="20230908 17:48:04.908">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=116.0.5845.179)
-Stacktrace:
-Backtrace:
-	GetHandleVerifier [0x00007FF656483E62+57250]
-	(No symbol) [0x00007FF6563FBC02]
-	(No symbol) [0x00007FF6562CE0BB]
-	(No symbol) [0x00007FF6562ADD39]
-	(No symbol) [0x00007FF65632ABF7]
-	(No symbol) [0x00007FF65633D9DF]
-	(No symbol) [0x00007FF656326583]
-	(No symbol) [0x00007FF6562FCC71]
-	(No symbol) [0x00007FF6562FDE54]
-	GetHandleVerifier [0x00007FF656734CF2+2879026]
-	GetHandleVerifier [0x00007FF656786F30+3215472]
-	GetHandleVerifier [0x00007FF65677FD4F+3186319]
-	GetHandleVerifier [0x00007FF656515505+652869]
-	(No symbol) [0x00007FF656407518]
-	(No symbol) [0x00007FF6564035F4]
-	(No symbol) [0x00007FF6564036EC]
-	(No symbol) [0x00007FF6563F38E3]
-	BaseThreadInitThunk [0x00007FFC5D617614+20]
-	RtlUserThreadStart [0x00007FFC5F4A26B1+33]
-</status>
+<status status="FAIL" starttime="20230909 21:30:52.508" endtime="20230909 21:31:09.181">Element with locator 'xpath://div[@class='actionsButton___12SV-']/img[1]' not found.</status>
 </test>
-<status status="FAIL" starttime="20230908 17:46:14.845" endtime="20230908 17:48:04.908"/>
+<status status="FAIL" starttime="20230909 21:29:58.874" endtime="20230909 21:31:09.193"/>
 </suite>
-<status status="FAIL" starttime="20230908 17:46:14.845" endtime="20230908 17:48:04.908"/>
+<status status="FAIL" starttime="20230909 21:29:58.874" endtime="20230909 21:31:09.198"/>
 </suite>
-<status status="FAIL" starttime="20230908 17:46:14.845" endtime="20230908 17:48:04.908"/>
+<status status="FAIL" starttime="20230909 21:29:58.858" endtime="20230909 21:31:09.202"/>
 </suite>
-<status status="FAIL" starttime="20230908 17:46:14.845" endtime="20230908 17:48:04.908"/>
+<status status="FAIL" starttime="20230909 21:29:58.858" endtime="20230909 21:31:09.205"/>
 </suite>
-<status status="FAIL" starttime="20230908 17:46:14.814" endtime="20230908 17:48:04.908"/>
+<status status="FAIL" starttime="20230909 21:29:58.843" endtime="20230909 21:31:09.208"/>
 </suite>
 <statistics>
 <total>
@@ -711,30 +592,5 @@ Backtrace:
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230908 17:48:04.905" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=116.0.5845.179)
-Stacktrace:
-Backtrace:
-	GetHandleVerifier [0x00007FF656483E62+57250]
-	(No symbol) [0x00007FF6563FBC02]
-	(No symbol) [0x00007FF6562CE0BB]
-	(No symbol) [0x00007FF6562ADD39]
-	(No symbol) [0x00007FF65632ABF7]
-	(No symbol) [0x00007FF65633D9DF]
-	(No symbol) [0x00007FF656326583]
-	(No symbol) [0x00007FF6562FCC71]
-	(No symbol) [0x00007FF6562FDE54]
-	GetHandleVerifier [0x00007FF656734CF2+2879026]
-	GetHandleVerifier [0x00007FF656786F30+3215472]
-	GetHandleVerifier [0x00007FF65677FD4F+3186319]
-	GetHandleVerifier [0x00007FF656515505+652869]
-	(No symbol) [0x00007FF656407518]
-	(No symbol) [0x00007FF6564035F4]
-	(No symbol) [0x00007FF6564036EC]
-	(No symbol) [0x00007FF6563F38E3]
-	BaseThreadInitThunk [0x00007FFC5D617614+20]
-	RtlUserThreadStart [0x00007FFC5F4A26B1+33]
-</msg>
 </errors>
 </robot>

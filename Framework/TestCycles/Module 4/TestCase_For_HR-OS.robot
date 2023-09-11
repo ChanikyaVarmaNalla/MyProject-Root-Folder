@@ -18,9 +18,9 @@ Fill TimeSheet Weekly
 	Fill Time Sheet For A Week On Weekly Basis    9:00 am    6:00 pm    Rampup_S    UI Automation    Worked on Automation Task.
 
 Update TimeSheet Daily And Weekly
-	Update Newly Created TimeSheet For Daily    Worked on Automation Assignments.
+#	Update Newly Created TimeSheet For Daily    Worked on Automation Assignments.
     Update Newly Created TimeSheet For Weekly    Worked on Automation Assignments.
 
 Delete TimeSheet Daily And Weekly
-    Delete Newly Created TimeSheet For Daily
+#    Delete Newly Created TimeSheet For Daily
     Delete Newly Created TimeSheet For Weekly
