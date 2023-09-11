@@ -148,15 +148,17 @@ Get the Dates
     END
     [Return]    ${date_list}
 
+
 Fill Time Sheet for a week on Daily basis
 	[Arguments]    ${fromtime}    ${totime}    ${project}    ${task}    ${description}
 	Wait Until Element Is Visible    ${Left_Menu_TimeSheet}
 	Mouse Over    ${Left_Menu_TimeSheet}
 	Click Element    ${Left_Menu_TimeSheet}
-	Sleep    5
+	Sleep    10
     ${dates}    Get The Dates
-    FOR    ${i}    IN    @{dates}[0:1]
+    FOR    ${i}    IN    @{dates}
     	Set Selenium Speed    2s
+    	Mouse Over    ${TimeSheet_AddTask}
         Click Element    ${TimeSheet_AddTask}
         Click Element    ${TimeSheet_StartDate}
         Press Keys    ${TimeSheet_StartDate}    ${i}    ENTER
@@ -176,7 +178,7 @@ Fill Time Sheet for a week on Weekly basis
 	Wait Until Element Is Visible    ${Left_Menu_TimeSheet}
 	Mouse Over    ${Left_Menu_TimeSheet}
 	Click Element    ${Left_Menu_TimeSheet}
-	Sleep    5
+	Sleep    10
     ${dates}    Get The Dates
     Set Selenium Speed    2s
     Click Element    ${TimeSheet_AddTask}
@@ -197,7 +199,7 @@ Update Newly Created TimeSheet For Daily
     Wait Until Element Is Visible    ${Left_Menu_TimeSheet}
     Mouse Over    ${Left_Menu_TimeSheet}
     Click Element    ${Left_Menu_TimeSheet}
-    Sleep    5
+    Sleep    10
     Set Selenium Speed    2s
     Mouse Over    ${TimeSheet_TaskUpdate}
     Click Element    ${TimeSheet_TaskUpdate}
@@ -219,7 +221,7 @@ Update Newly Created TimeSheet For Weekly
         Click Element    ${TimeSheet_TaskUpdate_Description}
         Input Text    ${TimeSheet_TaskUpdate_Description}    ${new_description}
         Click Element    ${TimeSheet_TaskUpdate_Button}
-        Sleep    5
+        Sleep    15
         Click Element    ${TimeSheet_NextDate}
     END
 
@@ -233,6 +235,7 @@ Delete Newly Created TimeSheet For Daily
     Click Element    ${TimeSheet_TaskDelete}
     Click Element    ${TimeSheet_TaskDelete_Yes}
 
+
 Delete Newly Created TimeSheet For Weekly
     Wait Until Element Is Visible    ${Left_Menu_TimeSheet}
     Mouse Over    ${Left_Menu_TimeSheet}
@@ -241,6 +244,10 @@ Delete Newly Created TimeSheet For Weekly
     ${days}    Get The Dates
     FOR    ${i}    IN   @{days}
     	Set Selenium Speed    3s
+    	Mouse Over    ${TimeSheet_TaskDelete}
         Click Element    ${TimeSheet_TaskDelete}
+        Mouse Over    ${TimeSheet_TaskDelete_Yes}
         Click Element    ${TimeSheet_TaskDelete_Yes}
+        Mouse Over    ${TimeSheet_NextDate}
+        Click Element    ${TimeSheet_NextDate}
     END

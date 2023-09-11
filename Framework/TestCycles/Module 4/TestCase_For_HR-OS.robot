@@ -13,6 +13,7 @@ Login To HROS
 
 Fill TimeSheet Daily
     Fill Time Sheet For A Week On Daily Basis    9:00 am    6:00 pm    Rampup_S    UI Automation    Worked on Automation Task.
+    Delete Newly Created TimeSheet For Weekly
 
 Fill TimeSheet Weekly
 	Fill Time Sheet For A Week On Weekly Basis    9:00 am    6:00 pm    Rampup_S    UI Automation    Worked on Automation Task.
