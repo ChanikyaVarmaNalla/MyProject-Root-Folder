@@ -31,5 +31,11 @@ pipeline {
                 }
             }
         }
+        stage('Debug') {
+            steps {
+                echo "Current Directory: ${pwd()}"
+                bat 'dir' // List files in the current directory
+            }
+        }
     }
 }

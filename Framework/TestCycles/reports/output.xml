@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.2 on win32)" generated="20230914 10:58:50.714" rpa="false" schemaversion="4">
+<suite id="s1" name="TestCase For HR-OS" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles\Module 4\TestCase_For_HR-OS.robot">
+<test id="s1-t1" name="Login To HROS" line="8">
+<kw name="Open HROS">
+<msg timestamp="20230914 10:58:51.164" level="FAIL">No keyword with name 'Open HROS' found.</msg>
+<status status="FAIL" starttime="20230914 10:58:51.164" endtime="20230914 10:58:51.164"/>
+</kw>
+<kw name="Login HROS">
+<arg>chanikya.varma@terralogic.com</arg>
+<arg>Hiddenleaf@7</arg>
+<status status="NOT RUN" starttime="20230914 10:58:51.164" endtime="20230914 10:58:51.164"/>
+</kw>
+<kw name="Validate Login">
+<status status="NOT RUN" starttime="20230914 10:58:51.164" endtime="20230914 10:58:51.164"/>
+</kw>
+<tag>login</tag>
+<status status="FAIL" starttime="20230914 10:58:51.162" endtime="20230914 10:58:51.164">No keyword with name 'Open HROS' found.</status>
+</test>
+<test id="s1-t2" name="Fill TimeSheet Daily" line="14">
+<kw name="Fill Time Sheet For A Week On Daily Basis">
+<arg>9:00 am</arg>
+<arg>6:00 pm</arg>
+<arg>Rampup_S</arg>
+<arg>UI Automation</arg>
+<arg>Worked on Automation Task.</arg>
+<msg timestamp="20230914 10:58:51.181" level="FAIL">No keyword with name 'Fill Time Sheet For A Week On Daily Basis' found.</msg>
+<status status="FAIL" starttime="20230914 10:58:51.181" endtime="20230914 10:58:51.181"/>
+</kw>
+<kw name="Delete Newly Created TimeSheet For Weekly">
+<status status="NOT RUN" starttime="20230914 10:58:51.181" endtime="20230914 10:58:51.181"/>
+</kw>
+<status status="FAIL" starttime="20230914 10:58:51.164" endtime="20230914 10:58:51.181">No keyword with name 'Fill Time Sheet For A Week On Daily Basis' found.</status>
+</test>
+<test id="s1-t3" name="Fill TimeSheet Weekly" line="18">
+<kw name="Fill Time Sheet For A Week On Weekly Basis">
+<arg>9:00 am</arg>
+<arg>6:00 pm</arg>
+<arg>Rampup_S</arg>
+<arg>UI Automation</arg>
+<arg>Worked on Automation Task.</arg>
+<msg timestamp="20230914 10:58:51.181" level="FAIL">No keyword with name 'Fill Time Sheet For A Week On Weekly Basis' found.</msg>
+<status status="FAIL" starttime="20230914 10:58:51.181" endtime="20230914 10:58:51.181"/>
+</kw>
+<status status="FAIL" starttime="20230914 10:58:51.181" endtime="20230914 10:58:51.181">No keyword with name 'Fill Time Sheet For A Week On Weekly Basis' found.</status>
+</test>
+<test id="s1-t4" name="Update TimeSheet Daily And Weekly" line="21">
+<kw name="Update Newly Created TimeSheet For Weekly">
+<arg>Worked on Automation Assignments.</arg>
+<msg timestamp="20230914 10:58:51.181" level="FAIL">No keyword with name 'Update Newly Created TimeSheet For Weekly' found.</msg>
+<status status="FAIL" starttime="20230914 10:58:51.181" endtime="20230914 10:58:51.181"/>
+</kw>
+<status status="FAIL" starttime="20230914 10:58:51.181" endtime="20230914 10:58:51.181">No keyword with name 'Update Newly Created TimeSheet For Weekly' found.</status>
+</test>
+<test id="s1-t5" name="Delete TimeSheet Daily And Weekly" line="25">
+<kw name="Delete Newly Created TimeSheet For Weekly">
+<msg timestamp="20230914 10:58:51.198" level="FAIL">No keyword with name 'Delete Newly Created TimeSheet For Weekly' found.</msg>
+<status status="FAIL" starttime="20230914 10:58:51.198" endtime="20230914 10:58:51.198"/>
+</kw>
+<status status="FAIL" starttime="20230914 10:58:51.181" endtime="20230914 10:58:51.198">No keyword with name 'Delete Newly Created TimeSheet For Weekly' found.</status>
+</test>
+<status status="FAIL" starttime="20230914 10:58:50.731" endtime="20230914 10:58:51.198"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">login</stat>
+</tag>
+<suite>
+<stat pass="0" fail="5" skip="0" id="s1" name="TestCase For HR-OS">TestCase For HR-OS</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230914 10:58:51.147" level="ERROR">Error in file 'C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles\Module 4\TestCase_For_HR-OS.robot' on line 4: Resource file 'Framework\Resources\Keywords\HROS_keywords.robot' does not exist.</msg>
+<msg timestamp="20230914 10:58:51.147" level="ERROR">Error in file 'C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles\Module 4\TestCase_For_HR-OS.robot' on line 5: Resource file 'Framework\Resources\Page Objects\HROS_PO.robot' does not exist.</msg>
+</errors>
+</robot>
