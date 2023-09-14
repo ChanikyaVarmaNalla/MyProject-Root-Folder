@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    Framework/Resources/Variables/HROS_variables.robot
+Resource    ../../Resources/Variables/HROS_variables.robot
 
 *** Keywords ***
 Open HROS

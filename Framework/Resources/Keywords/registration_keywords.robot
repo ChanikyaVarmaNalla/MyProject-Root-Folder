@@ -1,6 +1,6 @@
 *** Settings ***
-Resource    Framework/Resources/Variables/registration_variables.robot
-Resource    Framework/Resources/Variables/common_registration_variables.robot
+Resource    ../../Resources/Variables/registration_variables.robot
+Resource    ../../Resources/Variables/common_registration_variables.robot
 
 *** Keywords ***
 Fill Registration Form 1

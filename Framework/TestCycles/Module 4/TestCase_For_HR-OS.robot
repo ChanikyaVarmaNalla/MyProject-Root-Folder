@@ -1,8 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    Collections
-Resource    Framework/Resources/Keywords/HROS_keywords.robot
-Resource    Framework/Resources/Page Objects/HROS_PO.robot
+Resource    ../../Resources/Keywords/HROS_keywords.robot
+Resource    ../../Resources/Page Objects/HROS_PO.robot
 
 *** Test Cases ***
 Login To HROS

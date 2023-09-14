@@ -1,8 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    Framework/Resources/Keywords/login_keywords.robot
-Resource    Framework/Resources/Keywords/common_keywords.robot
-Resource    Framework/Resources/Page Objects/loginPO.robot
+Resource    ../../Resources/Keywords/login_keywords.robot
+Resource    ../../Resources/Keywords/common_keywords.robot
+Resource    ../../Resources/Page Objects/loginPO.robot
 
 *** Test Cases ***
 Login into URL1

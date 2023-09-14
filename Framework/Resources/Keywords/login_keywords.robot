@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    Framework/Resources/Variables/login_variables.robot
+Resource    ../../Resources/Variables/login_variables.robot
 
 *** Keywords ***
 Click Login 1

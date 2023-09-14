@@ -1,8 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    Framework/Resources/Page Objects/registrationPO.robot
-Resource    Framework/Resources/Keywords/registration_keywords.robot
-Resource    Framework/Resources/Keywords/common_keywords.robot
+Resource    ../../Resources/Page Objects/registrationPO.robot
+Resource    ../../Resources/Keywords/registration_keywords.robot
+Resource    ../../Resources/Keywords/common_keywords.robot
 
 *** Test Cases ***
 Test Registration 1 of url 1

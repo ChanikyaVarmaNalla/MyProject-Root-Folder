@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    Framework/Resources/Variables/login_variables.robot
+Resource    ../../Resources/Variables/login_variables.robot
 
 *** Keywords ***
 Open URL1

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.2 on win32)" generated="20230914 11:11:50.345" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.2 on win32)" generated="20230914 11:20:06.971" rpa="false" schemaversion="4">
 <suite id="s1" name="TestCase For Registration" source="C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles\Module 1\TestCase_For_Registration.robot">
 <test id="s1-t1" name="Test Registration 1 of url 1" line="8">
 <kw name="Open Registration Page 1">
-<msg timestamp="20230914 11:11:50.626" level="FAIL">No keyword with name 'Open Registration Page 1' found.</msg>
-<status status="FAIL" starttime="20230914 11:11:50.626" endtime="20230914 11:11:50.626"/>
+<msg timestamp="20230914 11:20:07.238" level="FAIL">No keyword with name 'Open Registration Page 1' found.</msg>
+<status status="FAIL" starttime="20230914 11:20:07.238" endtime="20230914 11:20:07.238"/>
 </kw>
 <kw name="Fill Registration Form 1">
 <arg>Chanikya</arg>
@@ -17,20 +17,20 @@
 <arg>522509</arg>
 <arg>ChanikyaVarma</arg>
 <arg>Kingkong@7</arg>
-<status status="NOT RUN" starttime="20230914 11:11:50.628" endtime="20230914 11:11:50.628"/>
+<status status="NOT RUN" starttime="20230914 11:20:07.238" endtime="20230914 11:20:07.238"/>
 </kw>
 <kw name="Submit Registration 1">
-<status status="NOT RUN" starttime="20230914 11:11:50.628" endtime="20230914 11:11:50.628"/>
+<status status="NOT RUN" starttime="20230914 11:20:07.252" endtime="20230914 11:20:07.252"/>
 </kw>
 <kw name="Close The URL">
-<status status="NOT RUN" starttime="20230914 11:11:50.628" endtime="20230914 11:11:50.628"/>
+<status status="NOT RUN" starttime="20230914 11:20:07.254" endtime="20230914 11:20:07.254"/>
 </kw>
-<status status="FAIL" starttime="20230914 11:11:50.611" endtime="20230914 11:11:50.628">No keyword with name 'Open Registration Page 1' found.</status>
+<status status="FAIL" starttime="20230914 11:20:07.238" endtime="20230914 11:20:07.254">No keyword with name 'Open Registration Page 1' found.</status>
 </test>
 <test id="s1-t2" name="Test Registration 1 of url 2" line="14">
 <kw name="Open Registration Page 2">
-<msg timestamp="20230914 11:11:50.636" level="FAIL">No keyword with name 'Open Registration Page 2' found.</msg>
-<status status="FAIL" starttime="20230914 11:11:50.636" endtime="20230914 11:11:50.636"/>
+<msg timestamp="20230914 11:20:07.254" level="FAIL">No keyword with name 'Open Registration Page 2' found.</msg>
+<status status="FAIL" starttime="20230914 11:20:07.254" endtime="20230914 11:20:07.254"/>
 </kw>
 <kw name="Fill Registration Form 2">
 <arg>Chanikya</arg>
@@ -43,17 +43,17 @@
 <arg>mySSN</arg>
 <arg>ChanikyaVarma</arg>
 <arg>Kingkong@7</arg>
-<status status="NOT RUN" starttime="20230914 11:11:50.636" endtime="20230914 11:11:50.636"/>
+<status status="NOT RUN" starttime="20230914 11:20:07.254" endtime="20230914 11:20:07.254"/>
 </kw>
 <kw name="Submit Registration 2">
-<status status="NOT RUN" starttime="20230914 11:11:50.644" endtime="20230914 11:11:50.644"/>
+<status status="NOT RUN" starttime="20230914 11:20:07.254" endtime="20230914 11:20:07.254"/>
 </kw>
 <kw name="Close The URL">
-<status status="NOT RUN" starttime="20230914 11:11:50.644" endtime="20230914 11:11:50.644"/>
+<status status="NOT RUN" starttime="20230914 11:20:07.254" endtime="20230914 11:20:07.254"/>
 </kw>
-<status status="FAIL" starttime="20230914 11:11:50.628" endtime="20230914 11:11:50.644">No keyword with name 'Open Registration Page 2' found.</status>
+<status status="FAIL" starttime="20230914 11:20:07.254" endtime="20230914 11:20:07.254">No keyword with name 'Open Registration Page 2' found.</status>
 </test>
-<status status="FAIL" starttime="20230914 11:11:50.345" endtime="20230914 11:11:50.644"/>
+<status status="FAIL" starttime="20230914 11:20:06.971" endtime="20230914 11:20:07.254"/>
 </suite>
 <statistics>
 <total>
@@ -66,8 +66,8 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230914 11:11:50.611" level="ERROR">Error in file 'C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles\Module 1\TestCase_For_Registration.robot' on line 3: Resource file 'Framework\Resources\Page Objects\registrationPO.robot' does not exist.</msg>
-<msg timestamp="20230914 11:11:50.611" level="ERROR">Error in file 'C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles\Module 1\TestCase_For_Registration.robot' on line 4: Resource file 'Framework\Resources\Keywords\registration_keywords.robot' does not exist.</msg>
-<msg timestamp="20230914 11:11:50.611" level="ERROR">Error in file 'C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles\Module 1\TestCase_For_Registration.robot' on line 5: Resource file 'Framework\Resources\Keywords\common_keywords.robot' does not exist.</msg>
+<msg timestamp="20230914 11:20:07.238" level="ERROR">Error in file 'C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles\Module 1\TestCase_For_Registration.robot' on line 3: Resource file 'Framework\Resources\Page Objects\registrationPO.robot' does not exist.</msg>
+<msg timestamp="20230914 11:20:07.238" level="ERROR">Error in file 'C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles\Module 1\TestCase_For_Registration.robot' on line 4: Resource file 'Framework\Resources\Keywords\registration_keywords.robot' does not exist.</msg>
+<msg timestamp="20230914 11:20:07.238" level="ERROR">Error in file 'C:\Users\ChanikyaN-3227\PycharmProjects\MyProject Root Folder\Framework\TestCycles\Module 1\TestCase_For_Registration.robot' on line 5: Resource file 'Framework\Resources\Keywords\common_keywords.robot' does not exist.</msg>
 </errors>
 </robot>

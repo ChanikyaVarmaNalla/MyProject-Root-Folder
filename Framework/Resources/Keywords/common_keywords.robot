@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    Framework/Resources/Variables/common_login_variables.robot
+Resource    ../../Resources/Variables/common_login_variables.robot
 
 *** Keywords ***
 Close The URL

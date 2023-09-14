@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 Library    Collections
 Library    DateTime
-Resource    Framework/Resources/Variables/HROS_variables.robot
+Resource    ../../Resources/Variables/HROS_variables.robot
 
 *** Keywords ***
 Login HROS

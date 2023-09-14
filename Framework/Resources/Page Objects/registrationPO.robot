@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    Framework/Resources/Variables/registration_variables.robot
+Resource    ../../Resources/Variables/registration_variables.robot
 
 *** Keywords ***
 Open Registration Page 1
