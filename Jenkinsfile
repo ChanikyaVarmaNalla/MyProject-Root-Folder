@@ -9,47 +9,27 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                script {
-                    def moduleDirs = [
-                        "Module 1": 'TestCase_For_Registration.robot',
-                        "Module 2": 'TestCase_For_Login.robot',
-                        "Module 3": 'TestCase_For_HR-OS.robot',
-                        "Module 4": 'TestCase_For_HR-OS.robot'
-                    ]
-
-                    def testResults = [:]
-
-                    // Run tests in parallel
-                    parallel moduleDirs.collectEntries { module, testScript ->
-                        ["$module": {
-                            try {
-                                dir("C:\\Users\\ChanikyaN-3227\\PycharmProjects\\MyProject Root Folder\\Framework\\TestCycles\\$module") {
-                                    bat "robot -d ../reports $testScript"
-                                }
-                                testResults["$module"] = 'PASSED'
-                            } catch (Exception e) {
-                                currentBuild.result = 'FAILURE'
-                                testResults["$module"] = 'FAILED'
-                            }
-                        }]
-                    }
-
-                    // Print test results
-                    echo "Test Results:"
-                    testResults.each { module, result ->
-                        echo "$module: $result"
-                    }
+                // First, navigate to the directory for module 1 tests
+                dir("C:\\Users\\ChanikyaN-3227\\PycharmProjects\\MyProject Root Folder\\Framework\\TestCycles\\Module 1") {
+                    // Run Robot Framework tests for reg module 1
+                    bat 'TestCase_For_Registration.robot'
+                }
+                // Then, navigate to the directory for module 1 tests
+                dir("C:\\Users\\ChanikyaN-3227\\PycharmProjects\\MyProject Root Folder\\Framework\\TestCycles\\Module 2") {
+                    // Run Robot Framework tests for login module 1
+                    bat 'TestCase_For_Login.robot'
+                }
+                // Navigate to the directory for module 2 tests
+                dir("C:\\Users\\ChanikyaN-3227\\PycharmProjects\\MyProject Root Folder\\Framework\\TestCycles\\Module 3") {
+                    // Run Robot Framework tests for reg module 2
+                    bat 'TestCase_For_HR-OS.robot'
+                }
+                // Then, navigate to the directory for module 2 tests
+                dir("C:\\Users\\ChanikyaN-3227\\PycharmProjects\\MyProject Root Folder\\Framework\\TestCycles\\Module 4") {
+                    // Run Robot Framework tests for login module 2
+                    bat 'TestCase_For_HR-OS.robot'
                 }
             }
-        }
-    }
-    post {
-        failure {
-            echo "Pipeline failed. Please check the test results."
-        }
-        success {
-            echo "Pipeline succeeded. All tests passed."
-            archiveArtifacts artifacts: '**/output.xml', allowEmptyArchive: true
         }
     }
 }
