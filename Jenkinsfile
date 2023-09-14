@@ -28,7 +28,7 @@ pipeline {
                 dir("C:\\Users\\ChanikyaN-3227\\PycharmProjects\\MyProject Root Folder\\Framework\\TestCycles\\Module 4") {
                     // Run Robot Framework tests for login module 2
                     bat 'TestCase_For_HR-OS.robot'
-
+                }
             }
         }
     }
